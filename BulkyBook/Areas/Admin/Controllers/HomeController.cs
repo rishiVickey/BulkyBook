@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace BulkyBook.Areas.Customer.Controllers
 {
-    [Area("Customer")]    
+    [Area("Admin")]    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
