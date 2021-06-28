@@ -22,6 +22,7 @@ namespace BulkuBook.DataAccess.IRepository.Repository
         public void Add(T entity)
         {
             dbset.Add(entity);
+            _db.SaveChanges();
         }
 
         public T Get(int id)
@@ -76,16 +77,19 @@ namespace BulkuBook.DataAccess.IRepository.Repository
         {
             T obj = dbset.Find(id);
             Remove(obj);
+            _db.SaveChanges();
         }
 
         public void Remove(T entity)
         {
             dbset.Remove(entity);
+            _db.SaveChanges();
         }
 
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbset.RemoveRange(entity);
+            _db.SaveChanges();
         }
     }
 }

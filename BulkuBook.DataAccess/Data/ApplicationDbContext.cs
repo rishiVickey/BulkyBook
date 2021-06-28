@@ -15,5 +15,9 @@ namespace BulkyBook.Data
         }
 
         public DbSet<Catagory> Catagories { get; set; }
+
+        public DbSet<CoverType> coverTypes { get; set; }
+
+        public DbSet<Product> products { get; set; }
     }
 }

@@ -9,15 +9,14 @@ using System.Threading.Tasks;
 namespace BulkyBook.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CatagoryController : Controller
+    public class CoverTypeController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfwork;
 
-        public CatagoryController(IUnitOfWork unitOfWork)
+        public CoverTypeController(IUnitOfWork unitOfwork)
         {
-            _unitOfWork = unitOfWork;
+            _unitOfwork = unitOfwork;
         }
-
         public IActionResult Index()
         {
             return View();
@@ -25,59 +24,60 @@ namespace BulkyBook.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Catagory catagory = new Catagory();
+            CoverType coverType = new CoverType();
             if(id == null)
             {
-                //for create
-                return View(catagory);
+                return View(coverType);
             }
-            catagory = _unitOfWork.catagory.Get(id.GetValueOrDefault());
-            if(catagory == null)
+            coverType = _unitOfwork.CoverType.Get(id.GetValueOrDefault());
+            if(coverType == null)
             {
                 return NotFound();
             }
-            return View(catagory);
+            return View(coverType);
         }
 
-
-        #region ApiCalls
+        #region APi Calls
         [HttpGet]
         public IActionResult GetAll()
         {
-            var obj =_unitOfWork.catagory.GetAll();
+            var obj = _unitOfwork.CoverType.GetAll();
             return Json(new { data = obj });
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Catagory catagory)
+        public IActionResult Upsert(CoverType cover)
         {
             if (ModelState.IsValid)
             {
-                if(catagory.Id ==0)
+                if (cover.Id == 0)
                 {
-                    _unitOfWork.catagory.Add(catagory);
+                    _unitOfwork.CoverType.Add(cover);
                 }
                 else
                 {
-                    _unitOfWork.catagory.Update(catagory);
-                }        
+                    _unitOfwork.CoverType.Update(cover);
+                }
             }
             return View(nameof(Index));
         }
 
-
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var obj = _unitOfWork.catagory.Get(id);
-            if(obj == null)
+            var obj = _unitOfwork.CoverType.Get(id);
+            if (obj == null)
             {
                 return Json(new { success = false, message = "Something Went Wrong" });
             }
-            _unitOfWork.catagory.Remove(obj);
-            return Json(new { success = true, message = "Delete Success" });
+            else
+            {
+                _unitOfwork.CoverType.Remove(obj);
+                return Json(new { success = true, message = "Delete Success" });
+            }
         }
+
         #endregion
     }
 }

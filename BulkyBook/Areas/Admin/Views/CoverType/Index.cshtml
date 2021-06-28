@@ -1,0 +1,29 @@
+﻿@model BulkyBook.Model.Models.CoverType
+@{
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-6">
+            <h1 class="text-primary">Cover Type</h1>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-success">Add Cover</a>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="border p-4">
+    <table id="MyTable" class="table table-bordered table-striped mt-lg-2" width="100%">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section scripts{ 
+    <script src="~/js/covertype.js"></script>
+}

@@ -9,5 +9,8 @@ namespace BulkuBook.DataAccess.IRepository
    public interface IUnitOfWork :IDisposable
     {
         ICatagoryRepository catagory { get; }
+
+        ICoverTypeRepository CoverType { get; }
+        IProductRepository product { get; }
     }
 }

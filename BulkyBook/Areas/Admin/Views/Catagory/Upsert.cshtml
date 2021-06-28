@@ -1,0 +1,39 @@
+﻿@model BulkyBook.Model.Models.Catagory
+@{
+    var title = "Edit Catagory";
+}
+
+<form method="post" class="Container border p-3">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        @if (Model.Id == 0) {
+            title = "Create Catagory";
+        }
+        <h1 class="text-primary">@title</h1>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-4">
+            <label asp-for="Name"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Name" class="form-control" placeholder="Name"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-4 offset-4 mt-2" >
+        @if(Model.Id == 0)
+            {
+                <partial name="_CreateAndBack"/>
+            }
+            else
+            {
+                <partial name="_EditAndBack" model="Model.Id"/>
+            }
+    </div>
+</form>
+
+
+@section scripts{ 
+<partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,32 @@
+﻿@model BulkyBook.Model.Models.Catagory
+@{
+}
+
+
+<div class="container ">
+    <div class="row">
+        <div class="col-6">
+            <h1>Catagory</h1>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-success">Add Catagory</a>
+        </div>
+    </div>
+</div>
+
+<br />
+<div class="border p-4">
+    <table id="myTbl" class="table table-striped table-bordered mt-lg-2">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section scripts{ 
+    <script src="~/js/Catagory.js"></script>
+}
+
