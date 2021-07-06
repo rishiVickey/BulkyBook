@@ -26,7 +26,7 @@ namespace BulkuBook.DataAccess.IRepository.Repository
                 {
                     obj.ImageUrl = product.ImageUrl;
                 }
-
+                obj.Title = product.Title;
                 obj.ISBN = product.ISBN;
                 obj.Price = product.Price;
                 obj.Price50 = product.Price50;

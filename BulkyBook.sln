@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulkyBook", "BulkyBook\BulkyBook.csproj", "{FBBDAD94-B7B1-4339-B286-970AB8FEE33D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkuBook.DataAccess", "BulkuBook.DataAccess\BulkuBook.DataAccess.csproj", "{9F651C99-8953-4E7F-9826-6E5E43B352B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulkuBook.DataAccess", "BulkuBook.DataAccess\BulkuBook.DataAccess.csproj", "{9F651C99-8953-4E7F-9826-6E5E43B352B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulkyBook.Model", "BulkyBook.Model\BulkyBook.Model.csproj", "{D5D690BD-5AAE-4E26-BF62-3AA823BAA085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BulkyBook.Model", "BulkyBook.Model\BulkyBook.Model.csproj", "{D5D690BD-5AAE-4E26-BF62-3AA823BAA085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{6D748B8F-3C14-4534-B127-60C075A7E9B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D5D690BD-5AAE-4E26-BF62-3AA823BAA085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D690BD-5AAE-4E26-BF62-3AA823BAA085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5D690BD-5AAE-4E26-BF62-3AA823BAA085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D748B8F-3C14-4534-B127-60C075A7E9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D748B8F-3C14-4534-B127-60C075A7E9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D748B8F-3C14-4534-B127-60C075A7E9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D748B8F-3C14-4534-B127-60C075A7E9B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

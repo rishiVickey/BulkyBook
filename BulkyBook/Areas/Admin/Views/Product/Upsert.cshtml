@@ -19,9 +19,9 @@
     </div>
     <hr />
     <div class="row">
-        <div class="col-9">
+        <div class="col-8">
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Title"></label>
                 </div>
                 <div class="col-5">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.ISBN"></label>
                 </div>
                 <div class="col-5">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Author"></label>
                 </div>
                 <div class="col-5">
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Description"></label>
                 </div>
                 <div class="col-5">
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Price"></label>
                 </div>
                 <div class="col-5">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Price50"></label>
                 </div>
                 <div class="col-5">
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.Price100"></label>
                 </div>
                 <div class="col-5">
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     Catagory
                 </div>
                 <div class="col-5">
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     CoverType
                 </div>
                 <div class="col-5">
@@ -104,7 +104,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-4">
+                <div class="col-3">
                     <label asp-for="product.ImageUrl"></label>
                 </div>
                 <div class="col-5">
@@ -112,7 +112,7 @@
                    
                 </div>
             </div>
-            <div class="form-group col-5 offset-4">
+            <div class="form-group col-5 offset-3">
                 <div class="row">
                     @if (Model.product.Id == 0)
                     {
@@ -130,10 +130,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 offset-1">
+        <div class="col-3">
             @if (Model.product.Id != 0)
             {
-                <ima src=@Model.product.ImageUrl width="100%" style="border-radius:5px;border:1px solid black" />
+                <img src="@Model.product.ImageUrl" width="100%" style="border-radius:5px;border:1px solid black" />
             }
 
         </div>

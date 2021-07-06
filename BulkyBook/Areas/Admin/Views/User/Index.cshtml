@@ -1,0 +1,39 @@
+﻿@model BulkyBook.Model.Models.ApplicationUser
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-primary">User List</h1>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-area="Identity" asp-page="/Account/Register" class="btn btn-outline-success">Register User</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="border p-4">
+    <table id="UserTbl" class="table table-striped table-bordered" width="100%">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Name</th>
+                <th>Street</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Role</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+@section scripts{ 
+ <script src="~/js/User.js"></script>
+}

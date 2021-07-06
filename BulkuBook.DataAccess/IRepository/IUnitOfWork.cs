@@ -12,5 +12,7 @@ namespace BulkuBook.DataAccess.IRepository
 
         ICoverTypeRepository CoverType { get; }
         IProductRepository product { get; }
+
+        ICompanyRepository Company { get; }
     }
 }

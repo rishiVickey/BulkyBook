@@ -23,14 +23,19 @@
             <span asp-validation-for="Name"></span>
         </div>
     </div>
-    <div class="col-4 offset-4 form-group mt-2">
-        @if(Model.Id == 0){
-         <partial name="_CreateAndBack" />
-            }
-            else
-            {
-                <partial name="_EditAndBack" model="Model.Id" />
-            }
+    <div class="row   mt-2">
+        <div class="col-4 offset-4">
+            <div class="row form-group">
+                @if (Model.Id == 0)
+                {
+                    <partial name="_CreateAndBack" />
+                }
+                else
+                {
+                    <partial name="_EditAndBack" model="Model.Id" />
+                }
+            </div>
+        </div>
     </div>
 </form>
 

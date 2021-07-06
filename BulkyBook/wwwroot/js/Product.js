@@ -1,4 +1,6 @@
-﻿var dataTable;
+﻿
+
+var dataTable;
 
 $(document).ready(function () {
     loadProductTable();
@@ -24,12 +26,39 @@ function loadProductTable() {
 
                                 <div class="text-center">
                                           <a href="/Admin/Product/Upsert/${data}" class="btn btn-warning">Edit</a>
-                                          <a  class="btn btn-danger">Delete</a>
+                                          <button onclick=Delete("/Admin/Product/Delete/${data}") class="btn btn-danger">Delete</button>
                                </div>
                            `
                 }, "width": "30%"
             }
             
         ]
+    });
+}
+
+
+function Delete(url){
+    swal({
+        icon: "warning",
+        title: "Are you sure you want to delete ?",
+        text: "deleted data cannot be retrived later.",
+        buttons: true,
+        dangerMode: true
+    }).then((willDelete) => {
+        if (willDelete) {
+            $.ajax({
+                type: "DELETE",
+                url: url,
+                success: function (data) {
+                    if (data.success) {
+                        toastr.success(data.message);
+                        dataTable.ajax.reload();
+                    } else {
+                        toastr.error(data.message);
+                    }
+                }
+
+            });
+        }
     });
 }

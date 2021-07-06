@@ -1,0 +1,38 @@
+﻿@model BulkyBook.Model.Models.Company
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1 class="text-primary">Company</h1>
+        </div>
+        <div class="col-6 text-right">
+            <a class="btn btn-success" asp-action="Upsert">Add Company</a>
+        </div>
+    </div>
+</div>
+
+<div class="border p-3 mt-4">
+    <table id="tbl" class="table table-striped table-bordered" width="100%">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th>Name</th>
+                <th>StreetAddress</th>
+                <th>City</th>
+                <th>State</th>
+                <th>PostalCode</th>
+                <th>PhoneNumber</th>
+                <th>Authorized</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+@section scripts{
+     <script src="~/js/Company.js"></script>
+            }
